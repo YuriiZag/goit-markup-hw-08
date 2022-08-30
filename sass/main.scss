@@ -1,0 +1,33 @@
+// variables
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./utils/mixin";
+@import "./utils/placeholders";
+
+// base
+@import "./base/common";
+@import "./base/container";
+
+// components
+@import "./components/button";
+@import "./components/social-networks";
+@import "./components/modal";
+@import "./components/modal-form";
+@import "./components/logo";
+// index
+@import "./components/index/hero";
+@import "./components/index/features";
+@import "./components/index/worksphere";
+@import "./components/index/team";
+@import "./components/index/clients";
+// portfolio
+@import "./components/portfolio/filters";
+@import "./components/portfolio/works-grid";
+
+// layouts
+@import "./layouts/header";
+@import "./layouts/menu";
+@import "./layouts/footer";
+@import "./layouts/navigation";
+
+

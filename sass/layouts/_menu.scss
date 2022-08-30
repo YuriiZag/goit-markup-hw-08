@@ -1,0 +1,33 @@
+.menu{
+
+    width: 100%;
+    background-color: $primary-white-color;
+
+
+    display:none;
+
+    position: absolute;
+    top: -16px;
+    left: 0;
+
+    padding: 48px 40px;
+
+    &__open-button{
+
+        background-color: $primary-white-color;
+        border: none;
+    }
+    &__close-button{
+        position: absolute;
+        top: 21px;
+        right: 25px;
+
+        background-color: $primary-white-color;
+        border: none;
+    }
+    
+}
+.menu.is-open {
+    display: block;
+
+}
