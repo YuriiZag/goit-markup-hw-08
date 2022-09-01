@@ -1,0 +1,19 @@
+.hero-section{
+    padding: 118px 0;
+    background-color: $hero-background-color;
+    &__heading{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        font-size: 26px;
+        line-height: 1.62;
+
+        color: $primary-white-color;
+    }
+    &__button{
+        display: block;
+        padding: 10px 24px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

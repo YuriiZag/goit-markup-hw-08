@@ -1,0 +1,14 @@
+.button{
+    border-radius: 4px;
+    border: none;
+    background-color: $primary-accent-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $primary-white-color;
+    font-style: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06;
+}

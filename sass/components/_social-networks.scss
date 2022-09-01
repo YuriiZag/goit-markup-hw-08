@@ -1,6 +1,11 @@
 .social-links{
     display: flex;
     align-items: center;
+    &--team {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     &--footer{
         margin-bottom: 60px;
     }
@@ -20,15 +25,25 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        &--team{
+            fill: $primary-icon-color;
+        }
+        &:hover, 
+        &:focus{
+            background-color: $primary-accent-color;
+        }
+        &--team:hover,
+        &--team:focus{
+            fill: $primary-white-color;
+        }
         &--footer{
             background-color: $footer-icon-background;
             fill: $primary-white-color;
         }
-        &__icon{
-            color: currentColor;
-        }
+
 
     }
-    
+    &__icon{
+        color: currentColor;
+    }
 }

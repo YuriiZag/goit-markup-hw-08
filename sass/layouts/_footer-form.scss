@@ -1,0 +1,37 @@
+.form__container{
+    width: 100%;
+}
+.form__title{
+    color: $primary-white-color;
+    font-style: Bold;
+    line-height: 1.17;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    
+    text-align: center;
+}
+.footer-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__input{
+        width: 100%;
+        padding: 16px;
+        margin-bottom: 20px;
+
+        background-color: $footer-background-color;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+
+        font-size: 16px;
+        line-height: 1.26;
+    }
+    &__submit{
+        padding: 10px 28px 10px 31px;
+    }
+    &__icon{
+        margin-left: 12px;
+    }
+}

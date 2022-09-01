@@ -1,0 +1,26 @@
+.backdrop{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+.modal{
+    position: absolute;
+    top: 93px;
+    left: 15px;
+    right: 15px;
+
+    max-width: calc(100% - 30px);
+    min-height: 609px;
+
+    padding: 40px;
+    background-color: $primary-white-color;
+}

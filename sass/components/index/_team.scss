@@ -1,0 +1,47 @@
+.team-section{
+    padding: 60px 0;
+    background-color: $feature-background-color;
+    &__heading{
+        background-color: $feature-background-color;
+        margin-bottom: 32px;
+        @extend %section-heading;
+        
+    }
+}
+.teammate-list{
+    background-color: $feature-background-color;
+    &__item{
+        background-color: $primary-white-color;
+        box-shadow: $team-shadow;
+    &:not(:last-child){
+        margin-bottom: 30px;
+        }
+    }
+    &__image{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__text-container{
+        padding-top: 33px;
+        padding-bottom: 24px;
+    }
+    &__teammate{
+        font-style: medium;
+        text-align: center;
+        padding-bottom: 10px;
+        
+        font-size: 16px;
+        line-height: 1.19;
+    }
+    &__position{
+        margin-bottom: 17px;
+
+        color: $secondary-text-color;
+        text-align: center;
+
+        font-size: 16px;
+        line-height: 1.19;
+
+    }
+    
+}

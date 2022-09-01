@@ -1,0 +1,23 @@
+.clients-section{
+    padding: 60px 0 65px 0;
+    &__heading{
+        @extend %section-heading;
+        margin-bottom: 36px;
+    }
+}
+.clients-list{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    &__clients{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 210px;
+        height: 92px;
+        border: 1px solid $primary-icon-color;
+        border-radius: 4px;
+    }
+    &
+}
