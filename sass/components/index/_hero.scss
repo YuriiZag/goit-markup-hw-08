@@ -1,6 +1,10 @@
 .hero-section{
     padding: 118px 0;
     background-color: $hero-background-color;
+    @include device(desktop) {
+        padding: 200px 0;
+    }
+    
     &__heading{
         text-align: center;
         text-transform: uppercase;

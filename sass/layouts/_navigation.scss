@@ -37,6 +37,11 @@
             line-height: 1.14;
             letter-spacing: 0.02em;
         }
+        @include device(desktop){
+            &:hover{
+                color: $primary-accent-color;
+            }
+        }
         
         &--current{
             color: $primary-accent-color;
@@ -46,16 +51,21 @@
                     content:"";
                     position: absolute;
                     left: 0px;
-                    bottom:-28px;
+                    bottom:-33px;
 
                 
-                    max-height: 4px;
+                    height: 4px;
                     width: 100%;
                     background-color: $primary-accent-color;
                     border-radius: 4px;
 
                 }
             }
+                @include device(desktop){
+                    &::after{
+                        bottom: -33px;
+                    }
+                }
         }
     }
 }
@@ -104,6 +114,9 @@
                 font-size: 12px;
                 line-height: 1,18;
                 margin-bottom: 10px;
+            }
+            @include device(desktop){
+                margin-bottom: 0;
             }
 
         }

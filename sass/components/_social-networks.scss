@@ -1,13 +1,14 @@
 .social-links{
     display: flex;
     align-items: center;
+    
     &--team {
             display: flex;
             align-items: center;
             justify-content: center;
         }
     &--footer{
-        margin-bottom: 60px;
+        justify-content: center;
     }
     &__item{
         display: inline-block;

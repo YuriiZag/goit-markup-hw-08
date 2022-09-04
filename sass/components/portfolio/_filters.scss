@@ -1,5 +1,8 @@
 .works-section{
     padding: 60px 0;
+    @include device(desktop){
+        padding: 90px 0;
+    }
 }
 
 .filter-list{

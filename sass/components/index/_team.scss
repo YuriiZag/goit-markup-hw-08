@@ -10,11 +10,25 @@
 }
 .teammate-list{
     background-color: $feature-background-color;
+    @include device(minTablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
     &__item{
         background-color: $primary-white-color;
         box-shadow: $team-shadow;
+        @include device(minTablet) {
+            width: calc(50% - 15px);
+        }
+        @include device(desktop){
+            width: calc((100% - 90px)/4)
+        }
     &:not(:last-child){
         margin-bottom: 30px;
+            @include device(minTablet) {
+                margin-bottom: 0;
+            }
         }
     }
     &__image{

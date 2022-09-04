@@ -2,12 +2,52 @@
     background-color: $footer-background-color;
     padding: 60px 0;
     &__container{
+        @include device(desktop){
+            display: flex;
+            align-items: baseline;
+        }
+    }
+    &__tablet-container{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
+        width: 100%;
+        margin-bottom: 60px;
+        @include device(minTablet) {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        @include device(desktop) {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 0;
+            margin-right: 93px;
+            justify-content: flex-start;
+        }
     } 
+    &__address-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 60px;
+        @include device(minTablet){
+            margin-bottom: 0;
+        }
+        @include device(desktop) {
+            display: flex;
+            align-items: baseline;
+            margin-right: 73px;
+        }
+    }
+    &__socials{
+        @include device(desktop) {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start;
+            flex-direction: column;
+
+        }
+    }
     &__social-label {
         color: white;
 
@@ -21,15 +61,15 @@
 
     }
 }
-.address{
-    margin-bottom: 60px;
-}
 .address-list{  
     &__item{
         display: flex;
         align-items: center;
         justify-content: center;
-
+        
+        @include device(desktop) {
+            justify-content: flex-start;
+        }
         &:not(:last-child){
             margin-bottom: 8px;
         }
@@ -41,7 +81,7 @@
         font-weight: 500;
         font-style: normal;
         line-height: 1.71;
-
+        
 
         &--white{
             color: $primary-white-color;
