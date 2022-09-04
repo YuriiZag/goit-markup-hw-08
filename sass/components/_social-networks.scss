@@ -25,8 +25,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: background-color 250ms $cubic;
+
         &--team{
             fill: $primary-icon-color;
+            transition:fill 250ms $cubic;
         }
         &:hover, 
         &:focus{

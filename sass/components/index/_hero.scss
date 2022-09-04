@@ -15,5 +15,9 @@
         padding: 10px 24px;
         margin-right: auto;
         margin-left: auto;
+        transition: background-color 250ms $cubic;
+        &:focus,&:hover{
+            background-color: $button-hover-color;
+        }
     }
 }

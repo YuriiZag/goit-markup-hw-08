@@ -9,15 +9,28 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    &__clients{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
+    &__items{
+        display: block;
+    }
+    &__client-link{
         width: 210px;
         height: 92px;
         border: 1px solid $primary-icon-color;
         border-radius: 4px;
+        
+        fill: $primary-icon-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: border-color 250ms $cubic, fill 250ms $cubic;
+
+        &:hover, &:focus{
+            border-color: $primary-accent-color;
+            fill: $primary-accent-color;
+        }
+        &__icon{
+            color: currentColor;
+        }
     }
-    &
 }

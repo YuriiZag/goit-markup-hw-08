@@ -1,0 +1,35 @@
+.works-section{
+    padding: 60px 0;
+}
+
+.filter-list{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    &__item{
+        margin-bottom: 15px;
+        &:not(:last-child){
+            margin-right: 8px;
+        }
+    }
+    &__filter-button {
+        padding: 6px 22px;
+        display: block;
+
+        background-color: $primary-background-color; 
+        border: none;
+        border-radius: 4px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.63;
+        transition: color 250ms $cubic, background-color 250ms $cubic,  box-shadow 250ms $cubic;
+        &:hover, &:focus{
+            color: $primary-white-color;
+            background-color: $primary-accent-color;
+            box-shadow: $filter-shadow;
+        }
+    }
+}

@@ -14,7 +14,7 @@
         text-decoration: none;
         color: $primary-text-color;
         
-        font-style: Medium; 
+        font-weight: 500;
         font-size: 40px;
         line-height: 1.18;
         
@@ -41,7 +41,7 @@
         &--mail{
             color: $secondary-text-color;
 
-            font-style: Medium;
+            font-weight: 500;
             font-size: 24px;
             line-height: 1.12;
 
@@ -51,7 +51,7 @@
         &--tel{
             color: rgba(33, 150, 243, 1);
 
-            font-style: Medium;
+            font-weight: 500;
             font-size: 34px;
             line-height: 1.18;
         }
@@ -75,8 +75,8 @@
         color: rgba(33, 150, 243, 1);
         
         text-decoration: none;
-        font-size: medium;
-        font-style: 18px;
+        font-weight: 500;
+        font-size: 18px;
         line-height: 1.22;
 
         letter-spacing: 2%;
