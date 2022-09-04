@@ -5,10 +5,24 @@
     width: 100%;
 }
 .nav-list{
-        margin-bottom: 300px;
-
+    margin-bottom: 270px;
+    @include device(minTablet) {
+        display: flex;
+        align-items: center;
+    
+        margin-bottom: 0;
+        margin-right: 78px;
+        margin-left: 88px;
+    }
+    @include device(desktop){
+        margin-right: auto;
+    }
     &__item:not(:last-child){
             margin-bottom: 32px;
+            @include device(minTablet){
+                margin-bottom: 0;
+                margin-right: 54px;
+            }
     }
     &__link{
         text-decoration: none;
@@ -17,9 +31,31 @@
         font-weight: 500;
         font-size: 40px;
         line-height: 1.18;
+        @include device(minTablet) {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.02em;
+        }
         
-        &--curant{
+        &--current{
             color: $primary-accent-color;
+            @include device(minTablet){
+                position: relative;
+                &::after{
+                    content:"";
+                    position: absolute;
+                    left: 0px;
+                    bottom:-28px;
+
+                
+                    max-height: 4px;
+                    width: 100%;
+                    background-color: $primary-accent-color;
+                    border-radius: 4px;
+
+                }
+            }
         }
     }
 }
@@ -28,24 +64,47 @@
     flex-direction: column-reverse;
     
     margin-bottom: 64px;
-
-    
+    @include device(minTablet) {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    @include device(desktop){
+        flex-direction: row;
+    }
     &__item{
         &:not(:first-child) {
             margin-bottom: 32px; 
+            @include device(minTablet){
+                margin-bottom: 0;
+            }
+            @include device(desktop){
+                margin-left: 30px;
+            }
         }
     }
     &__contact-link{
         text-decoration: none;
         color: $primary-text-color;
+        
+        @include device(minTablet){
+            display: flex;
+            align-items: center;
+        }
         &--mail{
             color: $secondary-text-color;
 
             font-weight: 500;
             font-size: 24px;
             line-height: 1.12;
+            letter-spacing: 0.02em;
 
-            letter-spacing: 2%;
+            @include device(minTablet) {
+
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 1,18;
+                margin-bottom: 10px;
+            }
 
         }
         &--tel{
@@ -54,26 +113,55 @@
             font-weight: 500;
             font-size: 34px;
             line-height: 1.18;
-        }
 
+            @include device(minTablet){
+                color: $secondary-text-color;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 1,18;
+                
+                letter-spacing: 0.02em;
+            }
+        }
+        @include device(minTablet) {
+
+            &:hover, 
+            &:focus{
+                color: $primary-accent-color;
+
+            }  
+        }
     }
     &__icon{
+        fill: currentColor;
+        margin-right: 8px;
         display: none;
+        @include device(minTablet){
+            display: inline-block;
+            fill: currentColor;
+        }
     }
 }
 .contact-networks{
     display: flex;
-    &__item{
-        
-        &:not(:last-child){
-            margin-right: 10px;
+    flex-wrap: wrap;
+
+    &__item {
             padding-right: 10px;
-            border-right: 1px solid rgba(33, 33, 33, 0.2);
+        &:not(:last-child)::after{
+            padding-right: 1px;
+            width: 1px;
+            height: 100%;
+            content: '';
+            background-color: rgba(33, 33, 33, 0.2);
+            width: 1px;
+            height: 100%;
         }
     }
     &__social-link{
         color: rgba(33, 150, 243, 1);
         
+        margin-right: 10px;
         text-decoration: none;
         font-weight: 500;
         font-size: 18px;
@@ -81,4 +169,7 @@
 
         letter-spacing: 2%;
     }
+    @include device(minTablet) {
+        display: none;
+        }
 }

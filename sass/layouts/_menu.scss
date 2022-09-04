@@ -3,19 +3,26 @@
     width: 100%;
     background-color: $primary-white-color;
 
-    pointer-events: none;
-    display:none;
-
     position: absolute;
     top: -16px;
     left: 0;
-
-    padding: 48px 40px;
-
+    pointer-events: none;
+    display: none;
+    padding: 48px 40px; 
+        @include device(minTablet) {
+            position: static;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            pointer-events: all;
+        }
     &__open-button{
 
         background-color: $primary-white-color;
         border: none;
+        @include device(minTablet) {
+            display: none;
+        }
     }
     &__close-button{
         position: absolute;
@@ -24,10 +31,13 @@
 
         background-color: $primary-white-color;
         border: none;
-    }
-    
+        @include device(minTablet){
+            display: none;
+        }
+    }    
 }
 .menu.is-open {
     display: block;
     z-index: 1;
+    pointer-events: all;
 }

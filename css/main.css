@@ -75,20 +75,21 @@ button {
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
 }
 @media only screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 @media only screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media only screen and (min-width: 1280px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -152,6 +153,7 @@ button {
 
 .backdrop {
   position: fixed;
+  display: block;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   top: 0;
@@ -167,27 +169,39 @@ button {
 }
 
 .modal {
-  position: absolute;
-  top: 10%;
-  transform: scale(1);
   max-width: 450px;
-  min-height: 609px;
+  position: absolute;
+  transform: translate(0, -50%) scale(1);
+  top: 50%;
   padding: 40px;
   background-color: #FFFFFF;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: top 2500ms cubic-bezier(0.4, 0, 0.2, 1), transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media only screen and (min-width: 480px) {
+@media screen and (min-width: 450px) {
   .modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    right: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 450px;
   }
 }
 
 .backdrop.is-hidden .modal {
-  transform: translateY(30%), scale(1.2);
+  position: absolute;
+  top: 100%;
+  transform: translate(0, 0), scale(1.2);
+  transition: top 2500ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 450px) {
+  .backdrop.is-hidden .modal {
+    top: 50%;
+    left: 50%;
+    transform: scale(1.2) translate(-50%, 0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .modal-form__title {
@@ -591,16 +605,30 @@ header {
 .menu {
   width: 100%;
   background-color: #FFFFFF;
-  pointer-events: none;
-  display: none;
   position: absolute;
   top: -16px;
   left: 0;
+  pointer-events: none;
+  display: none;
   padding: 48px 40px;
+}
+@media only screen and (min-width: 768px) {
+  .menu {
+    position: static;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    pointer-events: all;
+  }
 }
 .menu__open-button {
   background-color: #FFFFFF;
   border: none;
+}
+@media only screen and (min-width: 768px) {
+  .menu__open-button {
+    display: none;
+  }
 }
 .menu__close-button {
   position: absolute;
@@ -609,10 +637,16 @@ header {
   background-color: #FFFFFF;
   border: none;
 }
+@media only screen and (min-width: 768px) {
+  .menu__close-button {
+    display: none;
+  }
+}
 
 .menu.is-open {
   display: block;
   z-index: 1;
+  pointer-events: all;
 }
 
 .footer {
@@ -665,10 +699,30 @@ header {
 }
 
 .nav-list {
-  margin-bottom: 300px;
+  margin-bottom: 270px;
+}
+@media only screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-right: 78px;
+    margin-left: 88px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .nav-list {
+    margin-right: auto;
+  }
 }
 .nav-list__item:not(:last-child) {
   margin-bottom: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .nav-list__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 54px;
+  }
 }
 .nav-list__link {
   text-decoration: none;
@@ -677,8 +731,31 @@ header {
   font-size: 40px;
   line-height: 1.18;
 }
-.nav-list__link--curant {
+@media only screen and (min-width: 768px) {
+  .nav-list__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+.nav-list__link--current {
   color: #2196F3;
+}
+@media only screen and (min-width: 768px) {
+  .nav-list__link--current {
+    position: relative;
+  }
+  .nav-list__link--current::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -28px;
+    max-height: 4px;
+    width: 100%;
+    background-color: #2196F3;
+    border-radius: 4px;
+  }
 }
 
 .nav-contacts {
@@ -686,19 +763,54 @@ header {
   flex-direction: column-reverse;
   margin-bottom: 64px;
 }
+@media only screen and (min-width: 768px) {
+  .nav-contacts {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .nav-contacts {
+    flex-direction: row;
+  }
+}
 .nav-contacts__item:not(:first-child) {
   margin-bottom: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .nav-contacts__item:not(:first-child) {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .nav-contacts__item:not(:first-child) {
+    margin-left: 30px;
+  }
 }
 .nav-contacts__contact-link {
   text-decoration: none;
   color: #212121;
+}
+@media only screen and (min-width: 768px) {
+  .nav-contacts__contact-link {
+    display: flex;
+    align-items: center;
+  }
 }
 .nav-contacts__contact-link--mail {
   color: #757575;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.12;
-  letter-spacing: 2%;
+  letter-spacing: 0.02em;
+}
+@media only screen and (min-width: 768px) {
+  .nav-contacts__contact-link--mail {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1, 18;
+    margin-bottom: 10px;
+  }
 }
 .nav-contacts__contact-link--tel {
   color: rgb(33, 150, 243);
@@ -706,25 +818,61 @@ header {
   font-size: 34px;
   line-height: 1.18;
 }
+@media only screen and (min-width: 768px) {
+  .nav-contacts__contact-link--tel {
+    color: #757575;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1, 18;
+    letter-spacing: 0.02em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .nav-contacts__contact-link:hover, .nav-contacts__contact-link:focus {
+    color: #2196F3;
+  }
+}
 .nav-contacts__icon {
+  fill: currentColor;
+  margin-right: 8px;
   display: none;
+}
+@media only screen and (min-width: 768px) {
+  .nav-contacts__icon {
+    display: inline-block;
+    fill: currentColor;
+  }
 }
 
 .contact-networks {
   display: flex;
+  flex-wrap: wrap;
 }
-.contact-networks__item:not(:last-child) {
-  margin-right: 10px;
+.contact-networks__item {
   padding-right: 10px;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.contact-networks__item:not(:last-child)::after {
+  padding-right: 1px;
+  width: 1px;
+  height: 100%;
+  content: "";
+  background-color: rgba(33, 33, 33, 0.2);
+  width: 1px;
+  height: 100%;
 }
 .contact-networks__social-link {
   color: rgb(33, 150, 243);
+  margin-right: 10px;
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 2%;
+}
+@media only screen and (min-width: 768px) {
+  .contact-networks {
+    display: none;
+  }
 }
 
 .form__container {
