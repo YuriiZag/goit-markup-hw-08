@@ -4,6 +4,9 @@
         @extend %section-heading;
         margin-bottom: 36px;
     }
+     @include device(desktop) {
+        padding: 90px 0;
+    }
 }
 .clients-list{
     display: flex;

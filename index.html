@@ -154,8 +154,16 @@
             <ul class="worksphere-list">
                 <li class="worksphere-list__item">
                     <div class="worksphere-list__thumb">
-                        <img src="./image/desktop.jpg" alt="desktop solution" class="worksphere-list__image"
-                            width="370">
+                        <img 
+                            srcset="
+                                ./image/desktop/studio/img1-desktop.jpg 1x, 
+                                ./image/desktop/studio/img1-desktop@2x.jpg 2x
+                            "
+
+                            src="./image/desktop/studio/img1-desktop.jpg" 
+                            alt="desktop solution" class="worksphere-list__image" 
+                            width="370"
+                            >
                         <div class="worksphere-list__text-container">
                             <h3 class="worksphere-list__heading">Десктопні додатки</h3>
                         </div>
@@ -163,7 +171,15 @@
                 </li>
                 <li class="worksphere-list__item">
                     <div class="worksphere-list__thumb">
-                        <img src="./image/tablet.jpg" alt="tablet solution" class="worksphere-list__image" width="370">
+                        <img 
+                            srcset="
+                                ./image/desktop/studio/img2-desktop.jpg 1x, 
+                                ./image/desktop/studio/img2-desktop@2x.jpg 2x
+                            "
+                            src="./image/desktop/studio/img2-desktop.jpg" 
+                            alt="desktop solution" class="worksphere-list__image" 
+                            width="370"
+                            >
                         <div class="worksphere-list__text-container">
                             <h3 class="worksphere-list__heading">Мобільні додатки</h3>
                         </div>
@@ -171,8 +187,16 @@
                 </li>
                 <li class="worksphere-list__item">
                     <div class="worksphere-list__thumb">
-                        <img src="./image/smartphone.jpg" alt="smartphone solution" class="worksphere-list__image"
-                            width="370">
+                        <img 
+                            srcset="
+                                ./image/desktop/studio/img3-desktop.jpg 1x, 
+                                ./image/desktop/studio/img3-desktop@2x.jpg 2x
+                            "
+
+                            src="./image/desktop/studio/img3-desktop.jpg" 
+                            alt="desktop solution" class="worksphere-list__image" 
+                            width="370"
+                            >
                         <div class="worksphere-list__text-container">
                             <h3 class="worksphere-list__heading">Дизайнерські рішення</h3>
                         </div>
@@ -186,8 +210,19 @@
             <h2 class="team-section__heading">Наша команда</h2>
             <ul class="teammate-list">
                 <li class="teammate-list__item">
-                    <img src="./image/demjanenko.jpg" alt="Ігор Демяненко" class="teammate-list__image" width="450"
-                        height="460">
+                    <picture>
+                        <source srcset="./image/mob/studio/ihordemianenko-mob.jpg 1x, ./image/mob/studio/ihordemianenko-mob@2x.jpg 2x"
+                            media="(max-width:767px)" />
+                        <source
+                            srcset="./image/tablet/studio/ihordemianenko-tablet.jpg 1x, ./image/tablet/studio/ihordemianenko-tablet@2x.jpg 2x"
+                            media="(max-width:1279px)" />
+                        <source
+                            srcset="./image/desktop/studio/ihordemianenko-desktop.jpg 1x, ./image/desktop/studio/ihordemianenko-desktop@2x.jpg 2x"
+                            media="(max-width:2968px)" />
+                    
+                        <img src="./image/mob/studio/ihordemianenko-mob.jpg" alt="Ігор Демяненко" class="teammate-list__image" width="450">
+                    </picture>
+                    
                     <div class="teammate-list__text-container">
                         <h3 class="teammate-list__teammate">Ігор Демяненко</h3>
                         <p class="teammate-list__position">Product Designer</p>
@@ -225,8 +260,18 @@
 
                 </li>
                 <li class="teammate-list__item">
-                    <img src="./image/repina.jpg" alt="Ольга Рєпіна" class="teammate-list__image" width="450"
-                        height="460">
+                    <picture>
+                        <source srcset="./image/mob/studio/olhariepina-mob.jpg 1x, ./image/mob/studio/olhariepina-mob@2x.jpg 2x"
+                            media="(max-width:767px)" />
+                        <source
+                            srcset="./image/tablet/studio/olhariepina-tablet.jpg 1x, ./image/tablet/studio/olhariepina-tablet@2x.jpg 2x"
+                            media="(max-width:1279px)" />
+                        <source
+                            srcset="./image/desktop/studio/olhariepina-desktop.jpg 1x, ./image/desktop/studio/olhariepina-desktop@2x.jpg 2x"
+                            media="(max-width:2968px)" />
+                    
+                        <img src="./image/mob/studio/olhariepina-mob.jpg" alt="Ольга Рєпіна" class="teammate-list__image" width="450">
+                    </picture>
                     <div class="teammate-list__text-container">
                         <h3 class="teammate-list__teammate">Ольга Рєпіна</h3>
                         <p class="teammate-list__position">Frontend Developer</p>
@@ -264,8 +309,18 @@
 
                 </li>
                 <li class="teammate-list__item">
-                    <img src="./image/tarasov.jpg" alt="Микола Тарасов" class="teammate-list__image" width="450"
-                        height="460">
+                    <picture>
+                        <source srcset="./image/mob/studio/mykolatarasov-mob.jpg 1x, ./image/mob/studio/mykolatarasov-mob@2x.jpg 2x"
+                            media="(max-width:767px)" />
+                        <source
+                            srcset="./image/tablet/studio/mykolatarasov-tablet.jpg 1x, ./image/tablet/studio/mykolatarasov-tablet@2x.jpg 2x"
+                            media="(max-width:1279px)" />
+                        <source
+                            srcset="./image/desktop/studio/mykolatarasov-desktop.jpg 1x, ./image/desktop/studio/mykolatarasov-desktop@2x.jpg 2x"
+                            media="(max-width:2968px)" />
+                    
+                        <img src="./image/mob/studio/mykolatarasov-mob.jpg" alt="Микола Тарасов" class="teammate-list__image" width="450">
+                    </picture>
                     <div class="teammate-list__text-container">
                         <h3 class="teammate-list__teammate">Микола Тарасов</h3>
                         <p class="teammate-list__position">Marketing</p>
@@ -303,8 +358,18 @@
 
                 </li>
                 <li class="teammate-list__item">
-                    <img src="./image/yermakov.jpg" alt="Михайло Єрмаков" class="teammate-list__image" width="450"
-                        height="460">
+                    <picture>
+                        <source srcset="./image/mob/studio/mykhailoyermakov-mob.jpg 1x, ./image/mob/studio/mykhailoyermakov-mob@2x.jpg 2x"
+                            media="(max-width:767px)" />
+                        <source
+                            srcset="./image/tablet/studio/mykhailoyermakov-tablet.jpg 1x, ./image/tablet/studio/mykhailoyermakov-tablet@2x.jpg 2x"
+                            media="(max-width:1279px)" />
+                        <source
+                            srcset="./image/desktop/studio/mykhailoyermakov-desktop.jpg 1x, ./image/desktop/studio/mykhailoyermakov-desktop@2x.jpg 2x"
+                            media="(max-width:2968px)" />
+                    
+                        <img src="./image/mob/studio/mykhailoyermakov-mob.jpg" alt="Михайло Єрмаков" class="teammate-list__image" width="450">
+                    </picture>
                     <div class="teammate-list__text-container">
                         <h3 class="teammate-list__teammate">Михайло Єрмаков</h3>
                         <p class="teammate-list__position">UI Designer</p>

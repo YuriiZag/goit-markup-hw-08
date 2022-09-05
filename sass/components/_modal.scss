@@ -24,8 +24,8 @@
     padding: 40px;
     background-color: $primary-white-color;
     
-    transition: top 2500ms $cubic,
-    transform 2500ms $cubic;
+
+    transition: top 250ms $cubic;
 
     @media screen and (min-width:450px){
         position: absolute;
@@ -36,6 +36,9 @@
         transition: transform 250ms $cubic;
         width: 450px;
     } 
+    @include device(desktop) {
+        width: 528px;
+    }
 
     
 
@@ -45,7 +48,7 @@
     top: 100%;
     transform: translate(0, 0), scale(1.2);
     
-    transition: top 2500ms $cubic, transform 250ms $cubic;
+    transition: top 250ms $cubic, transform 250ms $cubic;
     
     @media screen and (min-width:450px){
         top: 50%;

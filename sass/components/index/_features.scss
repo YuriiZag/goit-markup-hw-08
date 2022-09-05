@@ -1,5 +1,8 @@
 .feature-section{
     padding: 60px 0;
+    @include device(desktop) {
+        padding: 90px 0;
+    }
 }
 .feature-list{
     @include device(minTablet) {

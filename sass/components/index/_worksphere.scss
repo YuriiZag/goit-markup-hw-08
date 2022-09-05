@@ -2,11 +2,11 @@
     display: none;
     @include device(desktop){
         display: block;
+        padding-bottom: 95px;
     }
 }
 @include device(desktop) {
     .worksphere-section {
-        padding-bottom: 95px;
 
         &__heading {
             font-weight: 700;
