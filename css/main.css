@@ -398,6 +398,8 @@ button {
 }
 @media only screen and (min-width: 1280px) {
   .hero-section {
+    background-size: 1600px;
+    background-position: center;
     padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/desktop/studio/hero-desktop.jpg);
   }
@@ -413,7 +415,20 @@ button {
   margin-bottom: 30px;
   font-size: 26px;
   line-height: 1.62;
+  letter-spacing: 0.06em;
   color: #FFFFFF;
+}
+@media only screen and (min-width: 768px) {
+  .hero-section__heading {
+    width: 360px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero-section__heading {
+    width: 695px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 .hero-section__button {
   display: block;
@@ -424,6 +439,12 @@ button {
 }
 .hero-section__button:focus, .hero-section__button:hover {
   background-color: #188CE8;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .feature-section {
@@ -470,6 +491,16 @@ button {
   font-weight: 700;
   line-height: 1.16;
 }
+@media only screen and (min-width: 768px) {
+  .feature-list__heading {
+    text-align: start;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .feature-list__heading {
+    text-align: start;
+  }
+}
 .feature-list__description {
   color: #757575;
   line-height: 1.71;
@@ -493,6 +524,14 @@ button {
     line-height: 1.17;
     padding-bottom: 50px;
   }
+}
+@media only screen and (min-width: 1280px) and (min-width: 1280px) {
+  .worksphere-section__heading {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+@media only screen and (min-width: 1280px) {
   .worksphere-list {
     display: flex;
     gap: 30px;
@@ -533,6 +572,12 @@ button {
 .team-section__heading {
   background-color: #F5F4FA;
   margin-bottom: 32px;
+}
+@media only screen and (min-width: 1280px) {
+  .team-section__heading {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .teammate-list {
@@ -578,7 +623,7 @@ button {
 .teammate-list__teammate {
   font-weight: 500;
   text-align: center;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.19;
 }
@@ -595,6 +640,12 @@ button {
 }
 .clients-section__heading {
   margin-bottom: 36px;
+}
+@media only screen and (min-width: 1280px) {
+  .clients-section__heading {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 @media only screen and (min-width: 1280px) {
   .clients-section {
@@ -654,12 +705,7 @@ button {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 40px;
-}
-.filter-list__item {
-  margin-bottom: 15px;
-}
-.filter-list__item:not(:last-child) {
-  margin-right: 8px;
+  gap: 8px;
 }
 .filter-list__filter-button {
   padding: 6px 22px;
@@ -681,7 +727,6 @@ button {
 .works-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 @media only screen and (min-width: 768px) {
@@ -693,9 +738,7 @@ button {
   }
 }
 .works-list__item {
-  height: 440px;
   max-width: 450px;
-  outline: 1px solid #EEEEEE;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .works-list__item:not(:last-child) {
@@ -720,6 +763,9 @@ button {
   }
 }
 .works-list__link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: #212121;
 }
@@ -730,7 +776,9 @@ button {
   width: 450px;
 }
 .works-list__text-container {
+  flex-grow: 1;
   padding: 20px 24px;
+  border: 1px solid #EEEEEE;
 }
 .works-list__name {
   font-weight: 700;
@@ -765,6 +813,7 @@ button {
 }
 
 header {
+  position: relative;
   padding: 16px 0;
   border-bottom: 1px solid #ECECEC;
 }
@@ -780,23 +829,25 @@ header {
 }
 
 .header__container {
-  position: relative;
   display: flex;
   justify-content: space-between;
 }
 
 .menu {
   width: 100%;
+  height: 100vh;
   background-color: #FFFFFF;
   position: absolute;
-  top: -16px;
+  top: 0;
   left: 0;
+  right: 0;
   pointer-events: none;
   display: none;
   padding: 48px 40px;
 }
 @media only screen and (min-width: 768px) {
   .menu {
+    height: auto;
     position: static;
     display: flex;
     align-items: center;
@@ -807,11 +858,15 @@ header {
 .menu__open-button {
   background-color: #FFFFFF;
   border: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media only screen and (min-width: 768px) {
   .menu__open-button {
     display: none;
   }
+}
+.menu__open-button:hover, .menu__open-button:focus {
+  fill: #2196F3;
 }
 .menu__close-button {
   position: absolute;
@@ -819,11 +874,15 @@ header {
   right: 25px;
   background-color: #FFFFFF;
   border: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media only screen and (min-width: 768px) {
   .menu__close-button {
     display: none;
   }
+}
+.menu__close-button:hover, .menu__close-button:focus {
+  fill: #2196F3;
 }
 
 .menu.is-open {
@@ -962,6 +1021,7 @@ header {
   font-weight: 500;
   font-size: 40px;
   line-height: 1.18;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media only screen and (min-width: 768px) {
   .nav-list__link {
@@ -971,10 +1031,8 @@ header {
     letter-spacing: 0.02em;
   }
 }
-@media only screen and (min-width: 1280px) {
-  .nav-list__link:hover {
-    color: #2196F3;
-  }
+.nav-list__link:hover, .nav-list__link:focus {
+  color: #2196F3;
 }
 .nav-list__link--current {
   color: #2196F3;
@@ -1029,9 +1087,20 @@ header {
     margin-left: 30px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .nav-contacts__item:first-child {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .nav-contacts__item:first-child {
+    margin-bottom: 0;
+  }
+}
 .nav-contacts__contact-link {
   text-decoration: none;
   color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media only screen and (min-width: 768px) {
   .nav-contacts__contact-link {
@@ -1050,13 +1119,14 @@ header {
   .nav-contacts__contact-link--mail {
     font-weight: 500;
     font-size: 12px;
-    line-height: 1, 18;
-    margin-bottom: 10px;
+    line-height: 1.18;
   }
 }
 @media only screen and (min-width: 1280px) {
   .nav-contacts__contact-link--mail {
-    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 .nav-contacts__contact-link--tel {
@@ -1070,14 +1140,19 @@ header {
     color: #757575;
     font-weight: 500;
     font-size: 12px;
-    line-height: 1, 18;
+    line-height: 1.18;
     letter-spacing: 0.02em;
   }
 }
-@media only screen and (min-width: 768px) {
-  .nav-contacts__contact-link:hover, .nav-contacts__contact-link:focus {
-    color: #2196F3;
+@media only screen and (min-width: 1280px) {
+  .nav-contacts__contact-link--tel {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
   }
+}
+.nav-contacts__contact-link:hover, .nav-contacts__contact-link:focus {
+  color: #2196F3;
 }
 .nav-contacts__icon {
   fill: currentColor;

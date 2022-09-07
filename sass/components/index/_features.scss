@@ -36,6 +36,13 @@
         
         font-weight: 700;
         line-height: 1.16;
+        @include device(minTablet) {
+            text-align: start;
+        }
+                
+        @include device(desktop) {
+            text-align: start;
+        }
     }
     &__description{
         color: $secondary-text-color;

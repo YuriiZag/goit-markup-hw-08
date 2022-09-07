@@ -3,6 +3,10 @@
     &__heading{
         @extend %section-heading;
         margin-bottom: 36px;
+        @include device(desktop) {
+            font-size: 36px;
+            line-height: 1.17;
+        }
     }
      @include device(desktop) {
         padding: 90px 0;

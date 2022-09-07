@@ -1,4 +1,5 @@
 header{
+    position: relative;
     padding: 16px 0;
     border-bottom: 1px solid $header-botom-line;
     @include device(minTablet){
@@ -9,7 +10,7 @@ header{
     }
 }
 .header__container{
-    position: relative;
+
     
     display: flex;
     justify-content: space-between;

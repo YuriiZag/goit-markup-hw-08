@@ -28,6 +28,8 @@
         }   
     }
     @include device(desktop) {
+        background-size: 1600px;    
+        background-position: center;
         padding: 200px 0;
         background-image:linear-gradient($hero-gradient-color,
                 $hero-gradient-color),
@@ -40,15 +42,23 @@
                     url(../image/desktop/studio/hero-desktop@2x.jpg);
             }
     }
-    
+
     &__heading{
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 30px;
         font-size: 26px;
         line-height: 1.62;
-
+        letter-spacing: 0.06em;
         color: $primary-white-color;
+        @include device(minTablet){
+            width: 360px;
+        }
+        @include device(desktop){
+            width: 695px;
+            font-size: 44px;
+            line-height: 1.36;
+        }
     }
     &__button{
         display: block;
@@ -60,4 +70,9 @@
             background-color: $button-hover-color;
         }
     }
+}
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
